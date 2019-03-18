@@ -6,3 +6,42 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
+/* selects all  */
+
+/* this resets all browsers */
+*{
+    margin: 0;
+    padding: 0;
+    /* borders and padding are not added to total height and width */
+    box-sizing: border-box;
+}
+ /* properties in the body, are usually inherited */
+body{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777;
+
+    /* padding is not inherited */
+    padding: 30px;
+}
+.header{
+    /*at any point, the height will be 95 percent of the view port*/
+    height: 95vh;
+    /* you can specify more than one background image */
+    /* the linear gradiant allows us to change colors accross */
+    background-image: linear-gradient(
+        to right bottom,
+        /* the opacity allows us to see the image in back  */
+        rgba(126, 213, 111, 0.8), 
+        rgba(40, 180, 133, 0.8)),
+        url("../img/hero.jpg");
+    /* no matter the viewport, this will always try to fit the background inside the div */
+    background-size: cover;
+    /* when the screen gets small, this makes the image crop evenly on both sides */
+    background-position: top;
+
+    /* think of quadrants but 1st quadrant starts on the left */
+    clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
+}
