@@ -63,6 +63,7 @@ body{
     text-transform: uppercase;
     /* the back part of an element is hidden, this is to fix the shaking */
     backface-visibility: hidden;
+    margin-bottom: 60px;
 
 }
 .heading-primary-main{
@@ -87,6 +88,9 @@ body{
     left: 50%;
     /* shifted half of the elements width to the left and height */
     transform:translate(-50%, -50%);
+
+    /* since the discover our tours button is an anchor tag, it is treated as text */
+    text-align: center;
 }
 
 @keyframes moveInLeft{
@@ -122,4 +126,74 @@ body{
         transform: translate(0);
 
     }
+}
+@keyframes moveInBottom{
+    /* browsers are only optimazed for opacity and transform  */
+    0%{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100%{
+        opacity: 1;
+        /* puts it back into the place we want it */
+        transform: translate(0);
+
+    }
+}
+
+/* special state */
+.btn:link, btn:visited{
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: relative;
+}
+
+.btn:hover{
+    transform: translateY(-3px);
+    /* x y and blur and color */
+    box-shadow: 0 10px 20px rgba(0,0,0,.2);
+}
+/* when clicked */
+.btn:active{
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+
+}
+
+.btn-white{
+    background-color: #fff;
+    color: #777;
+}
+.btn::after{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn-white::after{
+    background-color: #fff;
+    
+}
+.btn:hover::after{
+    transform: scaleX(1.4) scaleY(1.6);
+    
+    opacity: 0;
+}
+.btn-animated{
+    /* .75s is a delay */
+    animation: moveInBottom .5s ease-out .75s;
+    /* applies 0 percent before animation starts */
+    animation-fill-mode: backwards;
 }
