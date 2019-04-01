@@ -1,0 +1,48 @@
+@keyframes moveInLeft{
+    /* browsers are only optimazed for opacity and transform  */
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    80%{
+        transform: translateX(10px);
+
+    }
+    100%{
+        opacity: 1;
+        /* puts it back into the place we want it */
+        transform: translate(0);
+
+    }
+}
+@keyframes moveInRight{
+    /* browsers are only optimazed for opacity and transform  */
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    80%{
+        transform: translateX(-10px);
+
+    }
+    100%{
+        opacity: 1;
+        /* puts it back into the place we want it */
+        transform: translate(0);
+
+    }
+}
+@keyframes moveInBottom{
+    /* browsers are only optimazed for opacity and transform  */
+    0%{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100%{
+        opacity: 1;
+        /* puts it back into the place we want it */
+        transform: translate(0);
+
+    }
+}
