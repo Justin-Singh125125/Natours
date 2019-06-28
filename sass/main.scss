@@ -1,43 +1,26 @@
-@import "./base/base";
-@import "./base/animations";
-@import "./base/typography";
-@import "./base/utilities";
-@import "./components/feature-box";
-@import "./abstracts/functions";
-@import "./abstracts/mixins";
-@import "./abstracts/variables";
-
-@import "./pages/home";
-
-@import "./components/button";
-@import "./components/composition";
-@import "./components/card";
-@import "./components/story";
-@import "./components/bg-video";
-@import "./components/form";
-@import "./components/footer";
-@import "./components/popup";
-
-@import "./layout/header";
-@import "./layout/grid";
-@import "./layout/navigation";
 
 
-/*
-COLORS:
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
 
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
 
-*/
-/* selects all  */
+@import "components/bg-video";
+@import "components/button";
+@import "components/card";
+@import "components/composition";
+@import "components/feature-box";
+@import "components/form";
+@import "components/popup";
+@import "components/story";
 
-/* this resets all browsers */
+@import "layout/footer";
+@import "layout/grid";
+@import "layout/header";
+@import "layout/navigation";
 
-
-
-
-
-
-
+@import "pages/home";
